@@ -1,22 +1,106 @@
 <!DOCTYPE html>
 
-<html lang ="pt-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/estilo.css">
-    <title>Torresmo Tech</title>
+    <title>Torresmo Tech | Consultoria em Tecnologia</title>
+    <meta name="description"
+        content="Consultoria em tecnologia, montagem de computadores, manutenção, lives na Twitch e vídeos no YouTube.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-    
+        <div class="logo">
+            <h1>Torresmo <span>Tech</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#youtube">YouTube</a></li>
+                <li><a href="#twitch">Twitch</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-
-    </main>
+    <section id="inicio" class="hero">
+        <div class="hero-text">
+            <h2>Tecnologia sem complicação.</h2>
+            <p> Consultoria especializada, manutenção de computadores, upgrades, lives na Twitch e conteúdos exclusivos
+                no YouTube. </p> <button id="btnSaibaMais"> Agendar Consultoria </button>
+        </div>
+    </section>
+    <section id="sobre">
+        <h2>Sobre o Torresmo Tech</h2>
+        <p> O Torresmo Tech é um projeto criado para compartilhar conhecimento sobre tecnologia, hardware, manutenção de
+            computadores, upgrades, periféricos e muito mais. </p>
+        <p> Além do conteúdo gratuito nas redes sociais, também oferecemos consultoria personalizada para ajudar você a
+            resolver problemas tecnológicos ou montar o computador ideal. </p>
+    </section>
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <div class="cards">
+            <article class="card"> <i class="fa-solid fa-computer"></i>
+                <h3>Montagem de PCs</h3>
+                <p>Montagem personalizada para qualquer necessidade.</p>
+            </article>
+            <article class="card"> <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Manutenção</h3>
+                <p>Formatação, limpeza e reparos em computadores.</p>
+            </article>
+            <article class="card"> <i class="fa-solid fa-microchip"></i>
+                <h3>Upgrade</h3>
+                <p>Melhore o desempenho do seu computador.</p>
+            </article>
+            <article class="card"> <i class="fa-solid fa-headset"></i>
+                <h3>Consultoria</h3>
+                <p>Receba orientação para compras e soluções em tecnologia.</p>
+            </article>
+        </div>
+    </section>
+    <section id="youtube">
+        <h2>Último vídeo</h2>
+        <div id="youtubeContainer">
+            <p>Carregando informações do YouTube...</p>
+        </div>
+    </section>
+    <section id="twitch">
+        <h2>Status da Live</h2>
+        <div id="twitchContainer">
+            <p>Verificando status da Twitch...</p>
+        </div>
+    </section>
+    <section id="contato">
+        <h2>Solicite uma Consultoria</h2>
+        <form id="formConsultoria"> <input type="text" id="nome" placeholder="Nome" required> <input type="email"
+                id="email" placeholder="E-mail" required> <input type="text" id="cep" placeholder="CEP"> <input
+                type="text" id="rua" placeholder="Rua"> <input type="text" id="cidade" placeholder="Cidade"> <input
+                type="text" id="estado" placeholder="Estado"> <textarea id="mensagem" rows="6"
+                placeholder="Como posso ajudar?" required></textarea> <button type="submit"> Enviar </button> </form>
+    </section>
     <footer>
-        <script src="scripts/script.js"></script>
+        <h3>Torresmo Tech</h3>
+        <p> Tecnologia • Hardware • Games • Consultoria </p>
+        <div class="redes"> <a href="#" aria-label="YouTube"> <i class="fa-brands fa-youtube"></i> </a> <a href="#"
+                aria-label="Twitch"> <i class="fa-brands fa-twitch"></i> </a> <a href="#" aria-label="Instagram"> <i
+                    class="fa-brands fa-instagram"></i> </a> <a href="#" aria-label="GitHub"> <i
+                    class="fa-brands fa-github"></i> </a> </div>
+        <p> © 2026 Torresmo Tech - Todos os direitos reservados. </p>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/viacep.js"></script>
+    <script src="js/youtube.js"></script>
+    <script src="js/twitch.js"></script>
 </body>
+
+</html>
