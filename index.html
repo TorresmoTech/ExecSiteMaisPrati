@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 
 <body>
@@ -69,38 +69,49 @@
         </div>
     </section>
     <section id="youtube">
-        <h2>Último vídeo</h2>
+        <h2>YouTube</h2>
+        <div id="youtubeLiveContainer">
+            <p>Verificando se existe uma live...</p>
+        </div>
+        <br><br>
         <div id="youtubeContainer">
-            <p>Carregando informações do YouTube...</p>
+            <p>Carregando último vídeo...</p>
         </div>
     </section>
     <section id="twitch">
-        <h2>Status da Live</h2>
-        <div id="twitchContainer">
-            <p>Verificando status da Twitch...</p>
-        </div>
+        <h2>Live na Twitch</h2>
+        <div id="twitch-embed"></div>
     </section>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <section id="contato">
         <h2>Solicite uma Consultoria</h2>
-        <form id="formConsultoria"> <input type="text" id="nome" placeholder="Nome" required> <input type="email"
-                id="email" placeholder="E-mail" required> <input type="text" id="cep" placeholder="CEP"> <input
-                type="text" id="rua" placeholder="Rua"> <input type="text" id="cidade" placeholder="Cidade"> <input
-                type="text" id="estado" placeholder="Estado"> <textarea id="mensagem" rows="6"
-                placeholder="Como posso ajudar?" required></textarea> <button type="submit"> Enviar </button> </form>
+        <form id="formConsultoria">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="text" id="cep" placeholder="CEP" maxlength="9">
+            <input type="text" id="rua" placeholder="Rua" readonly>
+            <input type="text" id="cidade" placeholder="Cidade" readonly>
+            <input type="text" id="estado" placeholder="Estado" readonly>
+            <textarea id="mensagem" rows="6" placeholder="Como posso ajudar?" required></textarea>
+            <button type="submit"> Enviar </button>
+        </form>
     </section>
     <footer>
         <h3>Torresmo Tech</h3>
         <p> Tecnologia • Hardware • Games • Consultoria </p>
-        <div class="redes"> <a href="#" aria-label="YouTube"> <i class="fa-brands fa-youtube"></i> </a> <a href="#"
-                aria-label="Twitch"> <i class="fa-brands fa-twitch"></i> </a> <a href="#" aria-label="Instagram"> <i
-                    class="fa-brands fa-instagram"></i> </a> <a href="#" aria-label="GitHub"> <i
-                    class="fa-brands fa-github"></i> </a> </div>
+        <div class="redes">
+            <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i> </a> <a href="#" aria-label="Twitch">
+                <i class="fa-brands fa-twitch"></i> </a> <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i> </a> <a href="#" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i> </a>
+        </div>
         <p> © 2026 Torresmo Tech - Todos os direitos reservados. </p>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="js/viacep.js"></script>
-    <script src="js/youtube.js"></script>
-    <script src="js/twitch.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/viacep.js"></script>
+    <script src="scripts/youtube.js"></script>
+    <script src="scripts/twitch.js"></script>
 </body>
 
 </html>
