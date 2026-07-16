@@ -31,7 +31,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 12px 8%;
     background: #181818;
     position: sticky;
     top: 0;
@@ -39,8 +39,21 @@ header {
     border-bottom: 2px solid var(--laranja);
 }
 
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#logo img {
+    width: clamp(35px, 6vw, 50px);
+    max-width: 100%;
+    height: auto;
+}
+
 .logo h1 {
     font-size: 32px;
+    margin: 0;
 }
 
 .logo span {
@@ -79,7 +92,7 @@ nav a.ativo {
     padding: 40px;
     background: linear-gradient(rgba(0, 0, 0, .80),
             rgba(0, 0, 0, .80)),
-        url("../img/banner.jpg");
+        url("../img/Fundo.png");
     background-size: cover;
     background-position: center;
 }
@@ -266,14 +279,17 @@ footer h3 {
         flex-direction: column;
         gap: 20px;
     }
+
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 18px;
     }
+
     .hero h2 {
         font-size: 42px;
     }
+
     .hero p {
         font-size: 18px;
     }
@@ -283,9 +299,11 @@ footer h3 {
     .hero h2 {
         font-size: 34px;
     }
+
     section h2 {
         font-size: 30px;
     }
+
     button {
         width: 100%;
     }
