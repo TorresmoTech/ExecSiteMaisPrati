@@ -1,5 +1,5 @@
-const API_KEY = "AIzaSyAqT2k4siS4vIS8EDM5zl9TdxkupIUOpEQ";
-const CHANNEL_ID = "UCTodfh-vuAK-5cquHglKdvg";
+const API_KEY = CONFIG.YOUTUBE_API_KEY;
+const CHANNEL_ID = CONFIG.YOUTUBE_CHANNEL_ID;
 
 document.addEventListener("DOMContentLoaded", () => {
     verificarLive();

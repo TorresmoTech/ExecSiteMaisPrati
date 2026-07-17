@@ -12,7 +12,8 @@
         content="Consultoria em tecnologia, montagem de computadores, manutenção, lives na Twitch e vídeos no YouTube.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="estilos/estilo.css">
 </head>
@@ -89,10 +90,26 @@
         <form id="formConsultoria">
             <input type="text" id="nome" placeholder="Nome" required>
             <input type="email" id="email" placeholder="E-mail" required>
+            <input type="tel" id="telefone" placeholder="Telefone (WhatsApp)">
             <input type="text" id="cep" placeholder="CEP" maxlength="9">
             <input type="text" id="rua" placeholder="Rua" readonly>
             <input type="text" id="cidade" placeholder="Cidade" readonly>
             <input type="text" id="estado" placeholder="Estado" readonly>
+            <input type="text" id="bairro" placeholder="Bairro" readonly>
+            <input type="text" id="numero" placeholder="Número">
+            <input type="text" id="complemento" placeholder="Complemento">
+            <select id="assunto">
+                <option value="">Selecione o assunto</option>
+                <option>Montagem de PC</option>
+                <option>Upgrade</option>
+                <option>Manutenção</option>
+                <option>Notebook</option>
+                <option>Servidor</option>
+                <option>Rede</option>
+                <option>Consultoria</option>
+                <option>Compra de Peças</option>
+                <option>Outro</option>
+            </select>
             <textarea id="mensagem" rows="6" placeholder="Como posso ajudar?" required></textarea>
             <button type="submit"> Enviar </button>
         </form>
@@ -102,16 +119,19 @@
         <p> Tecnologia • Hardware • Games • Consultoria </p>
         <div class="redes">
             <a href="https://www.youtube.com/@torresmo_tech" aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i></a> 
+                <i class="fa-brands fa-youtube"></i></a>
             <a href="https://www.twitch.tv/torresmo_tech" aria-label="Twitch">
-            <i class="fa-brands fa-twitch"></i></a> 
+                <i class="fa-brands fa-twitch"></i></a>
             <a href="https://www.instagram.com/torresmo_tech" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i></a> 
+                <i class="fa-brands fa-instagram"></i></a>
             <a href="https://github.com/torresmotech" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i></a>
+                <i class="fa-brands fa-github"></i></a>
         </div>
         <p> © 2026 Torresmo Tech - Todos os direitos reservados. </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/supabase.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/viacep.js"></script>
     <script src="scripts/youtube.js"></script>
