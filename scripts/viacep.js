@@ -1,73 +1,69 @@
+// ================================
+// ViaCEP - Torresmo Tech
+// ================================
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    const campoCEP = document.getElementById("cep");
+    const cepInput = document.getElementById("cep");
 
-    campoCEP.addEventListener("blur", buscarCEP);
+    if (!cepInput) return;
+
+    cepInput.addEventListener("blur", buscarCEP);
 
 });
 
-
 async function buscarCEP() {
 
-    const cep = document
-        .getElementById("cep")
-        .value
-        .replace(/\D/g, "");
+    let cep = document.getElementById("cep").value;
+
+    cep = cep.replace(/\D/g, "");
 
     if (cep.length !== 8) {
 
-        limparCampos();
-
+        limparEndereco();
         return;
 
     }
 
     try {
 
-        const resposta = await fetch(
-            `https://viacep.com.br/ws/${cep}/json/`
-        );
+        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
 
-        const dados = await resposta.json();
+        if (!response.ok) {
+            throw new Error("Erro ao consultar o ViaCEP.");
+        }
+
+        const dados = await response.json();
 
         if (dados.erro) {
 
-            alert("CEP não encontrado.");
-
-            limparCampos();
-
+            limparEndereco();
             return;
 
         }
 
-        preencherCampos(dados);
+        document.getElementById("rua").value = dados.logradouro || "";
+        document.getElementById("bairro").value = dados.bairro || "";
+        document.getElementById("cidade").value = dados.localidade || "";
+        document.getElementById("estado").value = dados.uf || "";
 
-    } catch (erro) {
+    }
 
-        console.error("Erro ao consultar o ViaCEP:", erro);
+    catch (erro) {
 
-        alert("Não foi possível consultar o CEP.");
+        console.error("Erro ViaCEP:", erro);
+
+        limparEndereco();
 
     }
 
 }
 
-function preencherCampos(dados) {
-
-    document.getElementById("rua").value = dados.logradouro;
-
-    document.getElementById("cidade").value = dados.localidade;
-
-    document.getElementById("estado").value = dados.uf;
-
-}
-
-function limparCampos() {
+function limparEndereco() {
 
     document.getElementById("rua").value = "";
-
+    document.getElementById("bairro").value = "";
     document.getElementById("cidade").value = "";
-
     document.getElementById("estado").value = "";
 
 }
